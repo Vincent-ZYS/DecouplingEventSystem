@@ -18,7 +18,7 @@ public class EventCenter : MonoBehaviour
         if(d!=null && d.GetType() != callBack.GetType())
         {
             throw new Exception(string.Format("尝试为事件{0}添加不同类型的委托,当前事件所对应的委托是{1},要添加的委托类型是{2}"
-            ,eventType,d.GetType(),callBack.GetType()));
+                ,eventType,d.GetType(),callBack.GetType()));
         }
         m_EventTable[eventType] = (CallBack)m_EventTable[eventType] + callBack;
     }
